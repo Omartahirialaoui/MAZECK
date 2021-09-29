@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,100;1,300;1,500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Icons -->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
+
+</head>
+<body>
+  <div class="container"> 
+      <div class="navbar">
+        <div class="logo">
+          <img src="images/assets/logo.png"width="125px">
+        </div>
+          <nav>
+              <ul id="Menuitems">
+                <ul id="Menuitems">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="Products.html">Products</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="signup.html">Sign up</a></li>
+
+              </ul>
+          </nav>
+          <i class="material-icons-outlined">shopping_cart</i>
+          <i class="material-icons-outlined" onclick="menutoggle()">menu</i>
+        </div>  
+    </div>
+
+<!-----account-page------>
+
+<div class="account-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+         <img src="images/assets/backpack.png">
+      </div>
+       <div class="col-2">
+          <div class="form-container">
+            <div class="form-btn">
+               <span onclick="login()">Login</span>
+               <span onclick="register()">Registre</span>
+               <hr id="Indicator">
+            </div> 
+          <form id="LoginForm">
+             <input type="Text" placeholder="Username">
+             <input type="password" placeholder="Password">
+             <button type="submit" class="btn">Login</button>
+             <a href="">Forget password</a>
+          </form>
+
+            <form id="RegForm">
+             <input type="Text" placeholder="Username">
+             <input type="email" placeholder="Email">
+             <input type="password" placeholder="Password">
+             <button type="submit" class="btn">Regiter</button>
+
+          </form>
+
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+<!-----footer----->
+
+   <div class="footer">
+     <div class="container">
+      <div class="row">
+          <div class="footer-col-1">
+             <h3>Download our App</h3>
+             <p>Download App for Android and ios mobile phone.</p>
+              <div class="app-logo">
+                <img src="images/assets/telechargement.png">
+                  </div>
+                </div>
+            <div class="footer-col-2">
+                 <img src="file:///C:/Users/Omar/Desktop/mazack-1/images/THE%20LOGO.png">
+                </div>
+             <div class="footer-col-3">
+                  <h3>Useful Links</h3>
+                  <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                  </ul>
+             </div>
+              <div class="footer-col-4">
+                  <h3>Fllow us</h3>
+                  <ul>
+                    <li>Facebook</li>
+                    <li><a  href="https://www.instagram.com/hype_company2/"target="_BLANK">Instagram</a></li>
+                    <li>Twitter</li>
+                    <li>Youtube</li>
+                  </ul>
+             </div>
+         </div>
+         <hr>
+            <p class="Copyright">Copyright &copy; 2021 - Mazack </p>
+     </div>
+  </div>
+
+<!--------js for toggle menu-------->
+
+<script >
+  function menutoggle (){
+var Menuitems = document.getEleentByid("Menuitems");
+Menuitems.style.maxHeight="0px";
+     if(Menuitems.style.maxHeight=="0px")
+     {
+       Menuitems.style.maxHeight="200px";
+     }
+     else
+     {
+    Menuitems.style.maxHeight="0px;"
+     }
+}
+</script> 
+
+   <script>
+     var ProductImg= document.getElementById("ProductImg");
+     var SmallImg=document.getElementByClassName("small-img");
+     SmallImg[0].onclick=function()
+     { 
+           ProductImg.src=SmallImg[0].src;
+     }
+
+     SmallImg[1].onclick=function()
+     { 
+           ProductImg.src=SmallImg[1].src;
+     }
+          SmallImg[2].onclick=function()
+     { 
+           ProductImg.src=SmallImg[2].src;
+     }
+          SmallImg[3].onclick=function()
+     { 
+           ProductImg.src=SmallImg[3].src;
+     }
+   </script>
+
+<script>
+
+  var LoginForm = document.getElementById("LoginForm");
+  var RegForm = document.getElementById("RegForm");
+  var indicator = document.getElementById("indicator");
+
+       function register(){
+     
+         RegForm.style.transform  = "translateX(0px)";
+         LoginForm.style.transform  = "translateX(0px)";
+         Indicator.style.transform = "translateX(100px)";
+       }
+
+
+              function login(){
+     
+         RegForm.style.transform  = "translateX(300px)";
+         LoginForm.style.transform  = "translateX(300px)"; Indicator.style.transform = "translateX(0px)";
+
+       }
+ 
+ 
+</script>
+ </body>  
+</html>
